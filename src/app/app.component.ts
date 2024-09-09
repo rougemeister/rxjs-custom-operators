@@ -13,14 +13,19 @@ import { multiplyBy } from '../custom-operators/custom-operators';
 })
 export class AppComponent implements OnInit {
   title = 'rxjs-custom-operators';
-  originalValues = [1, 2, 'Hello', 3, 'World', 4];
+
+  originalValues = [5, 8, 'Hello', 13, 'World', 54];
   transformedValues: any[] = [];
-  factor = 2; // The multiplication factor
+  factor = 2; 
+
+  // Applying the custom operator
 
   ngOnInit() {
+
     const source$ = of(...this.originalValues);
-    
-    // Applying the custom operator
+
+
+      // Applying the custom operator
     source$.pipe(multiplyBy(this.factor)).subscribe(value => {
       this.transformedValues.push(value);
     });

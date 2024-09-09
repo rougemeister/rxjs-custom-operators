@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <h2>Original Values:</h2>
   <ul>
     @for(value of originalValues; track $index){
@@ -6,7 +6,7 @@
   }
   </ul>
 
-  <h2>Transformed Values (Multiplied by {{ factor }}):</h2>
+  <h2>Transformed Values (x {{ factor }}):</h2>
   <ul>
     @for(value of transformedValues; track $index){
     <li >{{ value }}</li>
